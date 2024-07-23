@@ -23,6 +23,10 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.6,
       letterSpacing: "0.0075em",
+      color: "#808B96",
+    },
+    body2: {
+      color: "#808B96",
     },
   },
 });

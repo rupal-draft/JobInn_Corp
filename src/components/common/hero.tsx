@@ -1,11 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Image from "next/image";
-import dots from "./../../../public/images/dot-group.png";
-import logo from "./../../../public/images/logo.png";
-import quotestart from "./../../../public/images/quote-start.png";
-import quoteend from "./../../../public/images/quote-end.png";
-import circle from "./../../../public/images/circle.png";
+import { IMAGES } from "../../utils/constants";
+import Typography from "./typography";
 
 interface CenteredTextBoxProps {
   text: string;
@@ -13,7 +10,7 @@ interface CenteredTextBoxProps {
   author?: string;
 }
 
-const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
+const Hero: React.FC<CenteredTextBoxProps> = ({
   text,
   bgcolor = "",
   author = "",
@@ -42,7 +39,7 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
           left: 16,
         }}
       >
-        <Image src={logo} alt="Logo" width={200} height={50} />
+        <Image src={IMAGES.Text.logo} alt="Logo" width={200} height={50} />
       </Box>
 
       <Box
@@ -59,11 +56,16 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
           sx={{
             position: "absolute",
             top: 0,
-            left: -60, // Adjust this value as needed
+            left: -60,
             zIndex: 0,
           }}
         >
-          <Image src={quotestart} alt="Quote Start" width={50} height={50} />
+          <Image
+            src={IMAGES.Text.quotestart}
+            alt="Quote Start"
+            width={50}
+            height={50}
+          />
         </Box>
 
         <Typography
@@ -73,9 +75,8 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
             position: "relative",
             zIndex: 1,
           }}
-        >
-          {text}
-        </Typography>
+          textlabel={text}
+        />
 
         <Box
           sx={{
@@ -85,7 +86,12 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
             zIndex: 0,
           }}
         >
-          <Image src={quoteend} alt="Quote End" width={50} height={50} />
+          <Image
+            src={IMAGES.Text.quoteend}
+            alt="Quote End"
+            width={50}
+            height={50}
+          />
         </Box>
 
         <Typography
@@ -95,9 +101,8 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
             position: "relative",
             zIndex: 1,
           }}
-        >
-          {author}
-        </Typography>
+          textlabel={author}
+        />
       </Box>
 
       <Box
@@ -107,7 +112,7 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
           right: 150,
         }}
       >
-        <Image src={dots} alt="Dots" width={100} height={100} />
+        <Image src={IMAGES.Text.dots} alt="Dots" width={100} height={100} />
       </Box>
 
       <Box
@@ -117,10 +122,10 @@ const CenteredTextBox: React.FC<CenteredTextBoxProps> = ({
           left: 9,
         }}
       >
-        <Image src={circle} alt="Circle" width={100} height={100} />
+        <Image src={IMAGES.Text.circle} alt="Circle" width={100} height={100} />
       </Box>
     </Box>
   );
 };
 
-export default CenteredTextBox;
+export default Hero;

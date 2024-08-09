@@ -1,10 +1,17 @@
-import { Box, Card, Typography } from "@mui/material";
 import React from "react";
+import { Box, Card as MaterialCard, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Link from "next/link";
 
-const DynamicCard = ({ Icon, heading, subheading }) => {
+interface CardProps {
+  Icon: React.ElementType;
+  heading: string;
+  subheading: string;
+}
+
+const Card: React.FC<CardProps> = ({ Icon, heading, subheading }) => {
   return (
-    <Card
+    <MaterialCard
       sx={{
         mb: 2,
         width: "400px",
@@ -67,8 +74,8 @@ const DynamicCard = ({ Icon, heading, subheading }) => {
           }}
         />
       </Box>
-    </Card>
+    </MaterialCard>
   );
 };
 
-export default DynamicCard;
+export default Card;

@@ -27,8 +27,8 @@ const Signin = () => {
   const router = useRouter();
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         color: "#f5f5f5",
         display: "flex",
         justifyContent: "center",
@@ -103,13 +103,13 @@ const Signin = () => {
               gap: 1,
             }}
           >
-            <ArrowBackIosIcon sx={{ color: "#808B96" }} />
+            <ArrowBackIosIcon sx={{ color: "secondary.main" }} />
 
             <Link
               href="/signup"
               sx={{
                 textDecoration: "none",
-                color: "#808B96",
+                color: "secondary.main",
               }}
             >
               Back
@@ -130,6 +130,7 @@ const Signin = () => {
                   LOCALSTORAGE_KEYS.Force_Change_Password,
                   "false"
                 );
+                window.location.href = `/create-password/${userRegistrationInfo.userId}`;
                 window.dispatchEvent(new Event("storage"));
               } else {
                 setErrorMessage("Invalid credentials");
@@ -156,7 +157,7 @@ const Signin = () => {
                     gutterBottom
                     sx={{
                       lineHeight: "1.5",
-                      color: "#808B96",
+                      color: "secondary.main",
                       mt: 1,
                       mb: 4,
                       maxWidth: "600px",
@@ -249,7 +250,7 @@ const Signin = () => {
                       sx={{
                         fontSize: "0.875rem",
                         textDecoration: "none",
-                        color: "#808B96",
+                        color: "secondary.main",
                         mt: 1,
                         mb: 1,
                       }}
@@ -302,7 +303,7 @@ const Signin = () => {
           </Formik>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

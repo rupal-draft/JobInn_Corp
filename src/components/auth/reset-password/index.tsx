@@ -27,8 +27,8 @@ const ResetPassword = () => {
   const [step, setStep] = useState(1);
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         color: "#f5f5f5",
         display: "flex",
         justifyContent: "center",
@@ -78,7 +78,7 @@ const ResetPassword = () => {
                   gutterBottom
                   sx={{
                     lineHeight: "1.5",
-                    color: "#808B96",
+                    color: "secondary.main",
                     mt: 1,
                     mb: 2,
                     maxWidth: "600px",
@@ -89,11 +89,15 @@ const ResetPassword = () => {
                 <Box sx={{ mb: 2 }}>
                   <Typography
                     variant="body2"
-                    sx={{ color: "#808B96", textAlign: "left" }}
+                    sx={{ color: "secondary.main", textAlign: "left" }}
                     textlabel="Password requirements"
                   />
                   <ul
-                    style={{ color: "#808B96", paddingLeft: "20px", margin: 0 }}
+                    style={{
+                      color: "secondary.main",
+                      paddingLeft: "20px",
+                      margin: 0,
+                    }}
                   >
                     {PasswordRequirements.map((text) => (
                       <li
@@ -270,7 +274,7 @@ const ResetPassword = () => {
           )}
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

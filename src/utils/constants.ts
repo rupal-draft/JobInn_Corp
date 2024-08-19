@@ -10,7 +10,7 @@ export const PRIVATE_URLS = [
   "/settings",
   "/job",
   "/workers",
-  "/chat",
+  "/messages",
   "/training",
   "/organization",
 ];
@@ -43,6 +43,12 @@ export const IMAGES = {
   Headers: {
     profileLogo: `${CONSTANTS.Images.BaseURL}/logo-rectangle.png`,
   },
+  Messages: {
+    profilePicture: `${CONSTANTS.Images.BaseURL}/Rupal.jpg`,
+  },
+  Dashboard: {
+    tIcon: `${CONSTANTS.Images.BaseURL}/T.png`,
+  },
 };
 
 export const ICONS = {
@@ -72,6 +78,88 @@ export const ICONS = {
   },
 };
 
+export const users = [
+  {
+    name: "Rupal Paul",
+    image: IMAGES.Messages.profilePicture,
+    message: "Hi I want to make enquiries",
+    time: "10:30 AM",
+    new: true,
+  },
+  {
+    name: "John Doe",
+    image: IMAGES.Messages.profilePicture,
+    message: "Are you available for a call?",
+    time: "10:45 AM",
+    new: true,
+  },
+  {
+    name: "Jane Smith",
+    image: IMAGES.Messages.profilePicture,
+    message: "Let's schedule a meeting.",
+    time: "11:00 AM",
+    new: false,
+  },
+  {
+    name: "Emily Johnson",
+    image: IMAGES.Messages.profilePicture,
+    message: "Looking forward to your reply.",
+    time: "11:15 AM",
+    new: false,
+  },
+  {
+    name: "Emily Johnson",
+    image: IMAGES.Messages.profilePicture,
+    message: "Looking forward to your reply.",
+    time: "11:15 AM",
+    new: false,
+  },
+  {
+    name: "Emily Johnson",
+    image: IMAGES.Messages.profilePicture,
+    message: "Looking forward to your reply.",
+    time: "11:15 AM",
+    new: false,
+  },
+  {
+    name: "Emily Johnson",
+    image: IMAGES.Messages.profilePicture,
+    message: "Looking forward to your reply.",
+    time: "11:15 AM",
+    new: false,
+  },
+  {
+    name: "Emily Johnson",
+    image: IMAGES.Messages.profilePicture,
+    message: "Looking forward to your reply.",
+    time: "11:15 AM",
+    new: false,
+  },
+];
+
+export const MESSAGES = [
+  {
+    text: "Hello! How are you?",
+    time: "10:30 AM",
+    sending: true,
+  },
+  {
+    text: "I'm good, thanks! How about you?",
+    time: "10:31 AM",
+    sending: false,
+  },
+  {
+    text: "What are your plans for today?",
+    time: "10:32 AM",
+    sending: true,
+  },
+  {
+    text: "Just working on a project.",
+    time: "10:33 AM",
+    sending: false,
+  },
+];
+
 export const SidebarMenu = [
   {
     text: "Dashboard",
@@ -93,7 +181,7 @@ export const SidebarMenu = [
   },
   {
     text: "Message",
-    path: "/chat",
+    path: "/messages",
     icon: ICONS.Sidebar.chat,
     activeIcon: ICONS.ActiveSidebar.chat,
   },

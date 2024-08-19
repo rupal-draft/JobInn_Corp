@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Card as MaterialCard, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Link from "next/link";
 
 interface CardProps {
   Icon: React.ElementType;

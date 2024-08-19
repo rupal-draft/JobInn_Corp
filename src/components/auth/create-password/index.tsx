@@ -28,8 +28,8 @@ const CreatePassword = () => {
   const initialValues: PasswordValues = { password: "", confirmPassword: "" };
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         color: "#f5f5f5",
         display: "flex",
         justifyContent: "center",
@@ -77,7 +77,7 @@ const CreatePassword = () => {
               gutterBottom
               sx={{
                 lineHeight: "1.5",
-                color: "#808B96",
+                color: "secondary.main",
                 mt: 1,
                 mb: 2,
                 maxWidth: "600px",
@@ -88,10 +88,16 @@ const CreatePassword = () => {
             <Box sx={{ mb: 2 }}>
               <Typography
                 variant="body2"
-                sx={{ color: "#808B96", textAlign: "left" }}
+                sx={{ color: "secondary.main", textAlign: "left" }}
                 textlabel="Password requirements"
               />
-              <ul style={{ color: "#808B96", paddingLeft: "20px", margin: 0 }}>
+              <ul
+                style={{
+                  color: "secondary.main",
+                  paddingLeft: "20px",
+                  margin: 0,
+                }}
+              >
                 {PasswordRequirements.map((text) => (
                   <li
                     key={text}
@@ -224,7 +230,7 @@ const CreatePassword = () => {
           </Box>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

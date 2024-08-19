@@ -17,8 +17,8 @@ interface email {
 const ForgotPassword: React.FC = () => {
   const [step, setStep] = useState(1);
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         height: "100vh",
         color: "#f5f5f5",
         overflow: "hidden",
@@ -113,7 +113,7 @@ const ForgotPassword: React.FC = () => {
                         gutterBottom
                         sx={{
                           lineHeight: "1.5",
-                          color: "#808B96",
+                          color: "secondary.main",
                           mt: 1,
                           mb: 4,
                           maxWidth: "600px",
@@ -182,13 +182,13 @@ const ForgotPassword: React.FC = () => {
                         gap: 1,
                       }}
                     >
-                      <ArrowBackIosIcon sx={{ color: "#808B96" }} />
+                      <ArrowBackIosIcon sx={{ color: "secondary.main" }} />
 
                       <Link
                         href="/signin"
                         sx={{
                           textDecoration: "none",
-                          color: "#808B96",
+                          color: "secondary.main",
                         }}
                       >
                         Back to login
@@ -256,7 +256,7 @@ that you own this account."
                     gap: 1,
                   }}
                 >
-                  <ArrowBackIosIcon sx={{ color: "#808B96" }} />
+                  <ArrowBackIosIcon sx={{ color: "secondary.main" }} />
 
                   <Link
                     href="#"
@@ -265,7 +265,7 @@ that you own this account."
                     }}
                     sx={{
                       textDecoration: "none",
-                      color: "#808B96",
+                      color: "secondary.main",
                     }}
                   >
                     Resend Email
@@ -276,7 +276,7 @@ that you own this account."
           )}
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

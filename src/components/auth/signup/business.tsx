@@ -94,8 +94,8 @@ const BusinessSignup: React.FC = () => {
     label: type.name,
   }));
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         height: "100vh",
         color: "#f5f5f5",
         overflow: "hidden",
@@ -167,11 +167,11 @@ const BusinessSignup: React.FC = () => {
           >
             {step !== 3 && (
               <React.Fragment>
-                <ArrowBackIosIcon sx={{ color: "#808B96" }} />
+                <ArrowBackIosIcon sx={{ color: "secondary.main" }} />
                 {step === 1 ? (
                   <Link
                     href="/signup"
-                    sx={{ color: "#808B96", textDecoration: "none" }}
+                    sx={{ color: "secondary.main", textDecoration: "none" }}
                   >
                     Back
                   </Link>
@@ -248,7 +248,7 @@ const BusinessSignup: React.FC = () => {
                       <Box sx={{ mb: 0.5 }}>
                         <Typography
                           variant="subtitle1"
-                          sx={{ color: "#808B96", textAlign: "left" }}
+                          sx={{ color: "secondary.main", textAlign: "left" }}
                           textlabel="First Name"
                         />
                         <FormTextField
@@ -289,7 +289,7 @@ const BusinessSignup: React.FC = () => {
                       <Box sx={{ mb: 0.5 }}>
                         <Typography
                           variant="subtitle1"
-                          sx={{ color: "#808B96", textAlign: "left" }}
+                          sx={{ color: "secondary.main", textAlign: "left" }}
                           textlabel="Last Name"
                         />
 
@@ -329,7 +329,7 @@ const BusinessSignup: React.FC = () => {
                       <Box sx={{ mb: 2 }}>
                         <Typography
                           variant="subtitle1"
-                          sx={{ color: "#808B96", textAlign: "left" }}
+                          sx={{ color: "secondary.main", textAlign: "left" }}
                           textlabel="Business Email Address"
                         />
 
@@ -470,7 +470,7 @@ const BusinessSignup: React.FC = () => {
                           <Typography
                             variant="subtitle1"
                             sx={{
-                              color: "#808B96",
+                              color: "secondary.main",
                               textAlign: "left",
                               mr: 0.5,
                             }}
@@ -522,7 +522,7 @@ const BusinessSignup: React.FC = () => {
                           <Typography
                             variant="subtitle1"
                             sx={{
-                              color: "#808B96",
+                              color: "secondary.main",
                               textAlign: "left",
                               mb: 1,
                             }}
@@ -564,7 +564,11 @@ const BusinessSignup: React.FC = () => {
                         <Box sx={{ width: "50%" }}>
                           <Typography
                             variant="subtitle1"
-                            sx={{ mb: 1, color: "#808B96", textAlign: "left" }}
+                            sx={{
+                              mb: 1,
+                              color: "secondary.main",
+                              textAlign: "left",
+                            }}
                             textlabel="Industry"
                           />
                           <FormSelectField
@@ -603,7 +607,11 @@ const BusinessSignup: React.FC = () => {
                         <Box sx={{ width: "50%" }}>
                           <Typography
                             variant="subtitle1"
-                            sx={{ mb: 1, color: "#808B96", textAlign: "left" }}
+                            sx={{
+                              mb: 1,
+                              color: "secondary.main",
+                              textAlign: "left",
+                            }}
                             textlabel="Country"
                           />
                           <FormSelectField
@@ -638,7 +646,11 @@ const BusinessSignup: React.FC = () => {
                         <Box sx={{ width: "50%" }}>
                           <Typography
                             variant="subtitle1"
-                            sx={{ mb: 1, color: "#808B96", textAlign: "left" }}
+                            sx={{
+                              mb: 1,
+                              color: "secondary.main",
+                              textAlign: "left",
+                            }}
                             textlabel="State"
                           />
                           <FormSelectField
@@ -673,7 +685,7 @@ const BusinessSignup: React.FC = () => {
                       <Box>
                         <Typography
                           variant="subtitle1"
-                          sx={{ color: "#808B96", textAlign: "left" }}
+                          sx={{ color: "secondary.main", textAlign: "left" }}
                           textlabel="Business Address"
                         />
                         <FormTextField
@@ -712,7 +724,7 @@ const BusinessSignup: React.FC = () => {
                       <Box>
                         <Typography
                           variant="subtitle1"
-                          sx={{ color: "#808B96", textAlign: "left" }}
+                          sx={{ color: "secondary.main", textAlign: "left" }}
                           textlabel="Website URL (Optional)"
                         />
 
@@ -815,7 +827,7 @@ const BusinessSignup: React.FC = () => {
           )}
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

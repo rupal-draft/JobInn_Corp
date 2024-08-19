@@ -24,13 +24,24 @@ const ChangePassword: React.FC<ModalProps> = ({ open, onClose }) => {
 
   const renderPasswordForm = (formik) => (
     <React.Fragment>
-      <ul style={{ color: "#808B96", paddingLeft: "20px" }}>
+      <Box
+        component="ul"
+        sx={{
+          color: "secondary.main",
+          paddingLeft: "20px",
+          listStyleType: "disc",
+        }}
+      >
         {PasswordRequirements.map((text) => (
-          <li key={text} style={{ fontSize: "0.9rem", lineHeight: "1.5" }}>
+          <Box
+            component="li"
+            key={text}
+            sx={{ fontSize: "0.9rem", lineHeight: "1.5" }}
+          >
             {text}
-          </li>
+          </Box>
         ))}
-      </ul>
+      </Box>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Box sx={{ display: "flex", alignItems: "center" }}>

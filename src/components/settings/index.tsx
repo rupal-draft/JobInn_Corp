@@ -11,11 +11,7 @@ import {
   Select,
   TextField,
 } from "@mui/material";
-import Sidebar from "../common/sidebar";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import HomeIcon from "@mui/icons-material/Home";
 import Typography from "../common/typography";
 import { IMAGES, Languages, LOCALSTORAGE_KEYS } from "../../utils/constants";
 import { ErrorMessage, Form, Formik } from "formik";
@@ -24,7 +20,6 @@ import {
   SettingsUpdateSchema,
 } from "../../utils/schemas";
 import FormTextField from "../common/inputField";
-import { usePathname } from "next/navigation";
 import ChangePassword from "./changePassword";
 import Image from "next/image";
 import Layout from "../layout";
@@ -99,7 +94,7 @@ const Settings: React.FC = () => {
   }, []);
 
   return (
-    <Layout>
+    <React.Fragment>
       <Box
         sx={{
           px: 5,
@@ -728,7 +723,7 @@ const Settings: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
-    </Layout>
+    </React.Fragment>
   );
 };
 

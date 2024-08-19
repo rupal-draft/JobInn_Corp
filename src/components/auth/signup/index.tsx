@@ -8,8 +8,8 @@ import Hero from "../../common/hero";
 
 const Signup = () => {
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         color: "#f5f5f5",
         display: "flex",
         justifyContent: "center",
@@ -113,7 +113,7 @@ const Signup = () => {
           />
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

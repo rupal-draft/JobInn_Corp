@@ -96,7 +96,7 @@ const Organization: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <React.Fragment>
       <Grid
         container
         spacing={2}
@@ -130,7 +130,7 @@ const Organization: React.FC = () => {
                   color:
                     activeHeading === heading.label
                       ? "primary.main"
-                      : "#808B96",
+                      : "secondary.main",
                   fontWeight:
                     activeHeading === heading.label ? "bold" : "normal",
                 }}
@@ -659,7 +659,7 @@ const Organization: React.FC = () => {
       ) : (
         <React.Fragment></React.Fragment>
       )}
-    </Layout>
+    </React.Fragment>
   );
 };
 

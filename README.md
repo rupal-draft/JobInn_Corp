@@ -3,7 +3,7 @@
 # JobInn_Corp
 
 JobInn is a job finding application where users can apply for jobs, chat and interact with others, create their own business or organization, hire workers, and conduct trainings.
-Live link:-https://job-inn-corp.vercel.app/signin
+Live link:-https://job-inn-corp.vercel.app
 
 ## Project Overview
 

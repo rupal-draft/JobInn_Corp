@@ -20,6 +20,12 @@ export const businessSignUpSchema = Yup.object().shape({
   email: emailSchema,
 });
 
+export const UpdateOrgSchema = Yup.object({
+  name: Yup.string().required("Name is required"),
+  email: emailSchema,
+  accountType: Yup.string().required("Account type is required"),
+});
+
 export const businessDetailsSchema = Yup.object().shape({
   businessName: Yup.string()
     .min(2, "Business name must be at least 2 characters")
@@ -37,6 +43,10 @@ export const businessDetailsSchema = Yup.object().shape({
 export const SigninSchema = Yup.object().shape({
   email: emailSchema,
   password: Yup.string().required("This field is required"),
+});
+
+export const EmailSchema = Yup.object().shape({
+  email: emailSchema,
 });
 
 export const SettingsUpdateSchema = Yup.object().shape({

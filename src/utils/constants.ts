@@ -15,6 +15,23 @@ export const PRIVATE_URLS = [
   "/organization",
 ];
 
+export enum Routes {
+  Home = "/",
+  Signin = "/signin",
+  Signup = "/signup",
+  SignupBusiness = "/signup/business",
+  CreatePassword = "/create-password",
+  ForgotPassword = "/forgot-password",
+  ResetPassword = "/reset-password",
+  Settings = "/settings",
+  Job = "/job",
+  Workers = "/workers",
+  Messages = "/messages",
+  Training = "/training",
+  Organization = "/organization",
+  Dashboard = "/dashboard",
+}
+
 export const CONSTANTS = {
   Images: {
     BaseURL: `/assets/images`,
@@ -49,6 +66,16 @@ export const IMAGES = {
   Dashboard: {
     tIcon: `${CONSTANTS.Images.BaseURL}/T.png`,
   },
+  Invoices: {
+    mastercardLogo: `${CONSTANTS.Images.BaseURL}/mastercard.png`,
+  },
+  Jobs: {
+    Avatar: `${CONSTANTS.Images.BaseURL}/Rupal.jpg`,
+  },
+  Calendar: {
+    Avatar1: `${CONSTANTS.Images.BaseURL}/Rupal.jpg`,
+    Avatar2: `${CONSTANTS.Images.BaseURL}/ShyamBhaiya.jpeg`,
+  },
 };
 
 export const ICONS = {
@@ -77,6 +104,340 @@ export const ICONS = {
     dashboard: `${CONSTANTS.Icons.BaseURL}/active-category.svg`,
   },
 };
+
+export const pools = [
+  {
+    name: "Efficient Busboy",
+    people: "5 people",
+    trainings: "Required Trainings:",
+  },
+  {
+    name: "Quick Bartender",
+    people: "3 people",
+    trainings: "Required Trainings:",
+  },
+  {
+    name: "Experienced Chef",
+    people: "4 people",
+    trainings: "Required Trainings:",
+  },
+];
+
+export const TrainingPools = [
+  { name: "Security", people: "5 people" },
+  { name: "Security Agent", people: "5 people" },
+  { name: "Night Chef Cooks", people: "5 people" },
+];
+
+export const shifts = [
+  {
+    name: "Busboy",
+    address: "12th Manfield Street",
+    dateTime: "March 12th-11am to 2pm",
+  },
+  {
+    name: "Security Agent",
+    address: "12th Manfield Street",
+    dateTime: "March 12th-11am to 2pm",
+  },
+  {
+    name: "Chef Cook",
+    address: "12th Manfield Street",
+    dateTime: "March 12th-11am to 2pm",
+  },
+];
+
+export const templates = [
+  { name: "Security Agent", certification: "Certification required:" },
+  { name: "Bartender", certification: "Certification required:" },
+  { name: "Busboy", certification: "Certification required:" },
+  { name: "Cleaner", certification: "Certification required:" },
+];
+
+export const events = [
+  {
+    title: "Job: Clean Windows",
+    start: new Date(2024, 8, 5, 10, 0),
+    end: new Date(2024, 8, 5, 12, 0),
+    imageUrl: [IMAGES.Calendar.Avatar1, IMAGES.Calendar.Avatar2],
+  },
+  {
+    title: "Training: Security Guard",
+    start: new Date(2024, 8, 6, 14, 0),
+    end: new Date(2024, 8, 8, 15, 30),
+    imageUrl: [IMAGES.Calendar.Avatar1, IMAGES.Calendar.Avatar2],
+  },
+  {
+    title: "Job: Cashier",
+    start: new Date(2024, 8, 12, 9, 0),
+    end: new Date(2024, 8, 12, 10, 30),
+    imageUrl: [IMAGES.Calendar.Avatar1, IMAGES.Calendar.Avatar2],
+  },
+  {
+    title: "Training: Shieves Worker",
+    start: new Date(2024, 8, 13, 13, 0),
+    end: new Date(2024, 8, 14, 14, 0),
+    imageUrl: [IMAGES.Calendar.Avatar1, IMAGES.Calendar.Avatar2],
+  },
+  {
+    title: "Training: Cashier",
+    start: new Date(2024, 8, 24, 11, 0),
+    end: new Date(2024, 8, 24, 12, 0),
+    imageUrl: [IMAGES.Calendar.Avatar1, IMAGES.Calendar.Avatar2],
+  },
+];
+
+export const WorkerData = [
+  {
+    id: 1,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 2,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 3,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 4,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 5,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 6,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+  {
+    id: 7,
+    col1: "Jonas Major",
+    col2: "4.7",
+    col3: "Busboy",
+    col4: "12 August 2022",
+  },
+];
+
+export let MemberData = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    accountType: "Member",
+    since: "10th July 2024",
+  },
+];
+
+const generateRandomName = () => {
+  const firstNames = [
+    "John",
+    "Jane",
+    "Alex",
+    "Sam",
+    "Chris",
+    "Taylor",
+    "Jordan",
+  ];
+  const lastNames = [
+    "Smith",
+    "Johnson",
+    "Brown",
+    "Davis",
+    "Martinez",
+    "Lee",
+    "Garcia",
+  ];
+
+  const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+
+  return `${firstName} ${lastName}`;
+};
+
+const formatTodayDate = () => {
+  const today = new Date();
+  const day = today.getDate();
+  const month = today.toLocaleString("default", { month: "long" });
+  const year = today.getFullYear();
+
+  const daySuffix = (d: number) => {
+    if (d > 3 && d < 21) return "th";
+    switch (d % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
+  return `${day}${daySuffix(day)} ${month} ${year}`;
+};
+
+export const TrainingData = [
+  {
+    id: 1,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: ["Approve", "Deny"],
+  },
+  {
+    id: 2,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: ["Approve", "Deny"],
+  },
+  {
+    id: 3,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: ["Approve", "Deny"],
+  },
+  {
+    id: 4,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: ["Approve", "Deny"],
+  },
+  {
+    id: 5,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: ["Approve", "Deny"],
+  },
+];
+
+export const PollsData = [
+  {
+    id: 1,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 2,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 3,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 4,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 5,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 6,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 7,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 8,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 9,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+  {
+    id: 10,
+    col1: "Jonas Major",
+    col2: "19",
+    col3: "4.7",
+    col4: "Busboy",
+    col5: "12 August 2022",
+    col6: "Active",
+  },
+];
 
 export const users = [
   {
@@ -159,7 +520,43 @@ export const MESSAGES = [
     sending: false,
   },
 ];
-
+export const rowData = [
+  {
+    invoiceId: "#342432",
+    billingDate: "23 March 2023",
+    plan: "Pro Plan",
+    amount: "$250.00",
+    status: "Paid",
+  },
+  {
+    invoiceId: "#342432",
+    billingDate: "23 March 2023",
+    plan: "Pro Plan",
+    amount: "$250.00",
+    status: "Paid",
+  },
+  {
+    invoiceId: "#342432",
+    billingDate: "23 March 2023",
+    plan: "Pro Plan",
+    amount: "$250.00",
+    status: "Paid",
+  },
+  {
+    invoiceId: "#342432",
+    billingDate: "23 March 2023",
+    plan: "Pro Plan",
+    amount: "$250.00",
+    status: "Paid",
+  },
+  {
+    invoiceId: "#342432",
+    billingDate: "23 March 2023",
+    plan: "Pro Plan",
+    amount: "$250.00",
+    status: "Paid",
+  },
+];
 export const SidebarMenu = [
   {
     text: "Dashboard",
@@ -269,6 +666,16 @@ export const BusinessSelection = {
     {
       id: 2,
       name: "Individual",
+    },
+  ],
+  organization_type: [
+    {
+      id: 1,
+      name: "Member",
+    },
+    {
+      id: 2,
+      name: "Administrator",
     },
   ],
   countries: [
@@ -18620,3 +19027,29 @@ export const Languages = [
   { code: "yo", name: "Yoruba", nativeName: "Yorùbá" },
   { code: "za", name: "Zhuang, Chuang", nativeName: "Saɯ cueŋƅ, Saw cuengh" },
 ];
+
+let members = [];
+
+export const getMembers = () => members;
+
+export const addMember = (email: string) => {
+  const newMember = { id: members.length + 1, email, role: "Member" };
+  members = [...members, newMember];
+};
+
+export const removeMember = (id: number) => {
+  members = members.filter((member) => member.id !== id);
+};
+
+export const addMemberData = (email: string, role: string) => {
+  const newMember = {
+    id: MemberData.length + 1,
+    name: generateRandomName(),
+    email,
+    accountType: role,
+    since: formatTodayDate(),
+  };
+  const updatedMemberData = [...MemberData, newMember];
+  MemberData = updatedMemberData;
+  members = [];
+};

@@ -91,22 +91,25 @@ const CreatePassword = () => {
                 sx={{ color: "secondary.main", textAlign: "left" }}
                 textlabel="Password requirements"
               />
-              <ul
-                style={{
+              <Box
+                component="ul"
+                sx={{
                   color: "secondary.main",
                   paddingLeft: "20px",
-                  margin: 0,
+                  listStyleType: "disc",
+                  m: 0,
                 }}
               >
                 {PasswordRequirements.map((text) => (
-                  <li
+                  <Box
+                    component="li"
                     key={text}
-                    style={{ fontSize: "0.8rem", lineHeight: "1.5" }}
+                    sx={{ fontSize: "0.8rem", lineHeight: "1.5" }}
                   >
                     {text}
-                  </li>
+                  </Box>
                 ))}
-              </ul>
+              </Box>
             </Box>
 
             <Formik

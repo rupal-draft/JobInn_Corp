@@ -333,7 +333,7 @@ const BusinessSignup: React.FC = () => {
                           textlabel="Business Email Address"
                         />
 
-                        <FormFormTextField
+                        <FormTextField
                           variant="outlined"
                           fullWidth
                           name="email"

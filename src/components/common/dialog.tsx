@@ -3,9 +3,7 @@ import {
   Dialog as CustomDialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
   IconButton,
-  Button,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -17,13 +15,7 @@ interface ModalProps {
   action?: string;
 }
 
-const Dialog: React.FC<ModalProps> = ({
-  open,
-  onClose,
-  title,
-  element,
-  action,
-}) => {
+const Dialog: React.FC<ModalProps> = ({ open, onClose, title, element }) => {
   return (
     <CustomDialog open={open} onClose={onClose}>
       <DialogTitle>

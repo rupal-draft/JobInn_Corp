@@ -22,7 +22,6 @@ import {
 import FormTextField from "../common/inputField";
 import ChangePassword from "./changePassword";
 import Image from "next/image";
-import Layout from "../layout";
 
 interface FormValues {
   firstName: string;

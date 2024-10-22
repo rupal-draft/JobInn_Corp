@@ -5,6 +5,7 @@ import {
   LOCALSTORAGE_KEYS,
   PRIVATE_URLS,
   PUBLIC_URLS,
+  Routes,
 } from "../../utils/constants";
 import { Box, CircularProgress } from "@mui/material";
 
@@ -20,22 +21,36 @@ const AuthGuard: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const userRegistrationInfo = JSON.parse(
       localStorage.getItem(LOCALSTORAGE_KEYS.Registration_Info)
     );
-    const passwordChange = localStorage.getItem(
+    const passwordChangeString = localStorage.getItem(
       LOCALSTORAGE_KEYS.Force_Change_Password
     );
+    const passwordChange = passwordChangeString === "true";
     const userId = userRegistrationInfo?.userId;
     let routeToRedirect = "";
-    if (forceChangePassword === "false") {
-      routeToRedirect = `/create-password/${userId}`;
-    } else if (userId && passwordChange === "true") {
-      if (PUBLIC_URLS.includes(pathname)) {
-        routeToRedirect = "/dashboard";
-      } else if (PRIVATE_URLS.includes(pathname)) {
-        setLoading(false);
-        return;
+
+    if (pathname === Routes.Home) {
+      if (userId) {
+        if (passwordChangeString != null && passwordChange) {
+          routeToRedirect = Routes.Dashboard;
+        } else {
+          routeToRedirect = `${Routes.CreatePassword}/${userId}`;
+        }
+      } else {
+        routeToRedirect = Routes.Signin;
       }
-    } else if (!PUBLIC_URLS.includes(pathname)) {
-      routeToRedirect = "/signin";
+    } else {
+      if (passwordChangeString != null && !passwordChange) {
+        routeToRedirect = `${Routes.CreatePassword}/${userId}`;
+      } else if (userId && passwordChange) {
+        if (PUBLIC_URLS.includes(pathname)) {
+          routeToRedirect = Routes.Dashboard;
+        } else if (PRIVATE_URLS.includes(pathname)) {
+          setLoading(false);
+          return;
+        }
+      } else if (!PUBLIC_URLS.includes(pathname)) {
+        routeToRedirect = Routes.Signin;
+      }
     }
 
     if (routeToRedirect && routeToRedirect !== pathname) {

@@ -1,0 +1,23 @@
+.rbc-toolbar button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.rbc-toolbar button:focus {
+  outline: none;
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button:hover {
+  background-color: #ffebcc;
+}
+
+.rbc-toolbar .rbc-btn-group {
+  margin-right: 10px;
+}
+
+.rbc-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
